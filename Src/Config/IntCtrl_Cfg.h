@@ -20,6 +20,7 @@
  *********************************************************************************************************************/
 #define ENABLE_GLOBAL_INTERRUPT				1
 
+
 /* NVIC PERIORITY GROUP AND SUPGROUP CONFIGRATIONS 
     "You can choose a number from 1, 2, 4, and 8"...
                         1 --> 1 GP_PRI and 8 SubGP_PRI, 
@@ -37,6 +38,7 @@
 /*number of programmable exceptions from 1 to 85: 
                                             7 system exceptions and faults,
                                             78 peripherals interrupts*/
+
 #define NUM_OF_ACTIVE_INTERRUPT 		1
 
 
