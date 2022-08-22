@@ -32,7 +32,7 @@
 	system features 
 *###################################/
 
-#define DEFAULT_SYS_FREQ 						16
+#define DEFAULT_SYS_FREQ 				16
 #define NUM_OF_AVAILABLE_CHANNELS	        	12
 
 
@@ -102,11 +102,11 @@ void Gpt_Init( const Gpt_ConfigType* ConfigPtr)
 			
 			
 			/*Extract config Data of Struct i*/
-			ChId 					= 	LocalConfigPtr[i].GptChannelId;
-			Mode		 			= 	LocalConfigPtr[i].ChannelMode;
-			MaxVal	 			= 	LocalConfigPtr[i].GptChannelTickValueMax;
+			ChId 			= 	LocalConfigPtr[i].GptChannelId;
+			Mode		 	= 	LocalConfigPtr[i].ChannelMode;
+			MaxVal	 		= 	LocalConfigPtr[i].GptChannelTickValueMax;
 			TimerFreq 		= 	LocalConfigPtr[i].GptGptChannelTickFrequency;
-			PreScalVal[ChId] = 	Gpt_GetPreScalerValue ((DEFAULT_SYS_FREQ/TimerFreq));
+			PreScalVal[ChId]        = 	Gpt_GetPreScalerValue ((DEFAULT_SYS_FREQ/TimerFreq));
 			
 			/*Update Timer State*/
 			TimerState[ChId] = GPT_INIT_STATE;
@@ -260,6 +260,7 @@ Gpt_ValueType Gpt_GetTimeRemaining(Gpt_ChannelType Channel)
 	}
 	return RemaingCount;
 }
+
 
 
 Std_ReturnType Gpt_GetPredefTimerValue(Gpt_PredefTimerType PredefTimer, uint32* TimeValuePtr)
