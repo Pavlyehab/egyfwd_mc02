@@ -56,7 +56,7 @@ static uint8 Gpt_GetPreScalerValue(uint32 DivVal);
 
 
 
-void Gpt_Init( const Gpt_ConfigType* ConfigPtr)
+void Gptm_Init( const Gpt_ConfigType* ConfigPtr)
 {
 	LocalConfigPtr = ConfigPtr; 
 	uint8 i = 0;
@@ -138,7 +138,7 @@ void Gpt_Init( const Gpt_ConfigType* ConfigPtr)
 }
 
 
-void Gpt_DisableNotification(Gpt_ChannelType Channel)
+void Gptm_DisableNotification(Gpt_ChannelType Channel)
 {
 	/*
 	Diable Time Out Interrupt (Interrupt Masking)  CLR TATOIM*/
@@ -149,7 +149,7 @@ void Gpt_DisableNotification(Gpt_ChannelType Channel)
 }
 
 
-void Gpt_EnableNotification(Gpt_ChannelType Channel  )
+void Gptm_EnableNotification(Gpt_ChannelType Channel  )
 {
 	/*set the appropriate bits in the GPTM Interrupt Mask Register(GPTMIMR)
 											Set TATOIM in IM Register*/
@@ -157,7 +157,7 @@ void Gpt_EnableNotification(Gpt_ChannelType Channel  )
 }
 
 
-void Gpt_StartTimer(Gpt_ChannelType Channel, Gpt_ValueType Value)
+void Gptm_StartTimer(Gpt_ChannelType Channel, Gpt_ValueType Value)
 {
 	uint8 ConfigStructIndex = 0;
 	/*check if the timer is already running*/
@@ -197,7 +197,7 @@ void Gpt_StartTimer(Gpt_ChannelType Channel, Gpt_ValueType Value)
 }
 
 
-void Gpt_StopTimer(Gpt_ChannelType Channel)
+void Gptm_StopTimer(Gpt_ChannelType Channel)
 {
 	if(TimerState[Channel] == GPT_RUNNING_STATE)
 	{
