@@ -3,6 +3,7 @@
 #include "DIO.h"
 #include "Mcu.h"
 #include "Port.h"
+
 int main(void)
 {
 	
@@ -11,10 +12,10 @@ int main(void)
 	Mcu_DistributePllClock();
 	IntCtrl_Init();
 	Port_Init(Port_Config);
-	Gpt_Init(Gpt_Config);
+	Gptm_Init(Gptm_Config);
 	while(1){
-        Gpt_Init(Gpt_Config);
-		Gpt_EnableNotification(Gpt_Channel_0);
+                Gptm_Init(Gptm_Config);
+		Gptm_EnableNotification(Gptm_Channel_0);
         }
         
 	return 0;
