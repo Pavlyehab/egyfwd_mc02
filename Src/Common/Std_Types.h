@@ -28,8 +28,10 @@
 # define STD_HIGH     1u /* Physical state 5V or 3.3V */
 # define STD_LOW      0u /* Physical state 0V */
 
+
 # define STD_ACTIVE   1u /* Logical state active */
 # define STD_IDLE     0u /* Logical state idle */
+
 
 # define STD_ON       1u
 # define STD_OFF      0u
@@ -50,10 +52,10 @@ typedef float                 float32;
 typedef double                float64;
 
 *******************************************************************************************************************
-#define SETBIT(REG,BIT) ((REG)|= (1<<(BIT))) // to set register bin bit to high
-#define CLEARBIT(REG,BIT) ((REG)&= (~(1<<(BIT)))) //to set register bin bit to low
-#define GETBIT(REG,BIT) ((REG) & (1<<(BIT))) // to read the value of a specific bit in a specific register
-#define TOGLBIT(REG,BIT) ((REG)^= (1<<(BIT))) // to togle value of a specific bit in a specific register
+#define SETBIT(REG,BIT) ((REG)|= (1<<(BIT)))        // to set register bin bit to high
+#define CLEARBIT(REG,BIT) ((REG)&= (~(1<<(BIT))))  //to set register bin bit to low
+#define GETBIT(REG,BIT) ((REG) & (1<<(BIT)))      // to read the value of a specific bit in a specific register
+#define TOGLBIT(REG,BIT) ((REG)^= (1<<(BIT)))     // to togle value of a specific bit in a specific register
 /**********************************************************************************************************************
  *  GLOBAL DATA TYPES AND STRUCTURES
  *********************************************************************************************************************/
